@@ -1,8 +1,8 @@
 function post (){
-  const from = document.getElementById("form"); //リクエストを送信する処理
+  const form = document.getElementById("form"); //リクエストを送信する処理
   form.addEventListener("submit",(e) => {
     e.preventDefault();
-    const fromData = new FormData(form);
+    const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
